@@ -1,0 +1,359 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px  rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    margin: 5px 600px 20px;
+    transition: transform .5s, height .2s ease;
+    overflow: hidden;
+    transform: scale(0);
+}
+
+.wrapper.active.active-popup{
+    height: 520px;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+    height: 440px;
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transform: translateX(-400px);
+    transition: none;
+}
+
+.wrapper .form-box.register{
+    transition: none;
+    position: absolute;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #DE4A0B;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    color: #DE4A0B;
+}
+
+.baton{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.baton:hover{
+    background-color: #DE4A0B;
+    color: #ffffff;
+    border: none;
+}
+
+.login-register{
+    font-size: .9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    color: #DE4A0B;
+}
+
+.wrapper .bebra{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 45px;
+    background-color: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 17px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .icon-close:hover{
+    background-color: #DE4A0B;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: -170px;
+    width: auto;
+    margin-top: -20px;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: -698px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .fade{
+    animation-name: fade;
+    animation-duration: 1s;
+    z-index: 1;
+  }
+
+  @keyframes fade {
+    from {opacity: .4;}
+    from {z-index: 1;}
+  }
+  
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #36312f;
+  }
+
+  .slides{
+    border-radius: 8px;
+    z-index: 1;
+  }
+
+
+  .dop-ul{
+    position: absolute;
+    left: 475px;
+    width: 225px;
+    background: #ffffff;
+    padding: 8px;
+    margin: 30px 0 0;
+    color: #000000;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    transition: transform .5s, height .10s ease;
+    transform: translateY(-150%);
+    z-index: 2;
+}
+  .dop-ul.active{
+    transform: translateY(0);
+    z-index: 2;
+  }
+
+  .dop-ul li{
+    width: 100%;
+    border: 1px solid rgba(red, green, blue, alpha);
+  }
+
+  .menu-item{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+.menu-src{
+    padding-right: 12px;
+}
+
+
+.search-box{
+    width: 60px;
+    height: auto;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box.active{
+    width: 490px;
+} 
+
+.search-box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 0 60px 0 20px;
+    outline: none;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #000000;
+    border: 2px solid black;
+}
+
+.search-box .search-btn{
+    position: absolute;
+    top: 4.6%;
+    right: 13.1%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    text-align: center;
+    line-height: 50px; 
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #DE4A0B;
+}
+
+.search-box .search-btn.active{
+    display: none;
+}
+
+.search-box .cancel-btn{
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform .5s, height .2s ease;
+    transform: scale(0);
+    color: #000000;
+    top: 2.4%;
+    right: 14.7%;
+}
+
+.search-box .cancel-btn.active{
+    transform: scale(1);
+}
+
+.search-box .inp.active{
+    opacity: 1;
+}
+
+.ul-menu{
+    position: relative;
+    display: flex;
+    margin-left: 1rem;
+    transform: scale(1);
+}
+
+.ul-menu.nonactive{
+    transform: scale(0);
+    display: none;
+
+}
+
+.account{
+    width: 150%;
+    height: 150%;
+}
+

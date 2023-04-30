@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display-none{
+    @apply hidden;
+}
+
+.burger{
+    height: 20px;
+    position: relative;
+    width: 30px;
+}
+
+.burger-line{
+    display: flex;
+    width: 30px;
+    height: 2px;
+    background-color: #DE4A0B;
+    transition: .3s all ease;
+}
+
+.top-line{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mid-line{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.bottom-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.burger.active>.top-line{
+    transform: translateY(8px) rotate(45deg);
+    transition: .3s all ease;
+}
+
+.burger.active>.mid-line{
+    opacity: 0;
+    transition: .3s all ease;
+}
+
+.burger.active>.bottom-line{
+    transform: translateY(-10px) rotate(-45deg);
+    transition: .3s all ease;
+}
+
+.text-secondary{
+    color: #4a4f53;
+}
+
+#toggle:checked ~ label div.toggle-dot{
+    @apply translate-x-6;
+    background: #ff0032;
+}
