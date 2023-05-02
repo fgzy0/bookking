@@ -23,24 +23,24 @@ Info::sessionStart();
                 <a href="/">BookKing</a>
             </span>
             <ul class="ul-menu">
-                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm" href="/main">Главное 2023</a></li>
+                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm transition-all" href="/main">Главное 2023</a></li>
                 <p style="margin-left: 1rem;">|</p>
-                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm" href="#">Иностранные</a></li>
+                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm transition-all" href="#">Иностранные</a></li>
                 <li><p style="margin-left: 1rem;">|</p>
-                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm" href="#" href="#">Для школы</a></li>
+                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm transition-all" href="#" href="#">Для школы</a></li>
                 <p style="margin-left: 1rem;">|</p>
-                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm" href="#" href="#">Для молодежи</a></li>
+                <li><a style="margin-left: 1rem;" class="hover:text-[#DE4A0B] xl:text-base lg:text-sm transition-all" href="#" href="#">Для молодежи</a></li>
                 <p style="margin-left: 1rem;">|</p>
-                <li style="margin-left: 1rem;"><button id="btn-menu"><a class="hover:text-[#DE4A0B] xl:text-base lg:text-sm items-center" href="#" href="#">Еще <ion-icon style="font-size: 15px;" name="chevron-down-circle"></ion-icon></button></li>
+                <li style="margin-left: 1rem;"><button id="btn-menu"><a class="hover:text-[#DE4A0B] xl:text-base lg:text-sm items-center transition-all" href="#" href="#">Еще <ion-icon style="font-size: 15px;" name="chevron-down-circle"></ion-icon></button></li>
                     <ul class="dop-ul">
                         <div>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/book.d440297.svg"><a href="#">Научная фантастика</a></li>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/stationery.eca8427.svg"><a href="#">Художественная литература</a></li>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/games.15887dd.svg"><a href="#">Увлечения</a></li>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/art.fa9505e.svg"><a href="#">Искусство</a></li>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/souvenirs.5f8a9fc.svg"><a href="#">Красота. Здоровье. Спорт</a></li>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/calendar.8cd5e38.svg"><a href="#">Психология</a></li>
-                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md"><img class="menu-src" src="/png_files/menu/promo.9ba3680.svg"><a href="#">Распродажа</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/book.d440297.svg"><a href="#">Научная фантастика</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/stationery.eca8427.svg"><a href="#">Художественная литература</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/games.15887dd.svg"><a href="#">Увлечения</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/art.fa9505e.svg"><a href="#">Искусство</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/souvenirs.5f8a9fc.svg"><a href="#">Красота. Здоровье. Спорт</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/calendar.8cd5e38.svg"><a href="#">Психология</a></li>
+                            <li class="menu-item hover:bg-[#DE4A0B] rounded-md transition-all"><img class="menu-src" src="/png_files/menu/promo.9ba3680.svg"><a href="#">Распродажа</a></li>
                         </div>
                     </ul>
                 </li>

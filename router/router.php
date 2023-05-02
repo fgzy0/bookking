@@ -22,6 +22,8 @@ Router::myGet('/reduct-category', 'reduct-category');
 Router::myGet('/delete-category', 'delete-category');
 Router::myGet('/products', 'products');
 Router::myGet('/add-product', 'add-product');
+Router::myGet('/reduct-product', 'reduct-product');
+Router::myGet('/delete-product', 'delete-product');
 Router::myPost('/reductuser', Info::class, 'reductUser', true, false);
 Router::myPost('/deleteuser', Info::class, 'deleteUser', true, false);
 Router::myPost('/registeruser', Info::class, 'registerUser', true, false);
@@ -32,6 +34,8 @@ Router::myPost('/updateUser2', Info::class, 'updateUser2', true, false);
 Router::myPost('/addcategory', Admin::class, 'addCategory', true, false);
 Router::myPost('/reductcategory', Admin::class, 'reductCategory', true, false);
 Router::myPost('/deletecategory', Admin::class, 'deleteCategory', true, false);
-Router::myPost('/addproduct', Admin::class, 'addProduct', true, true);
+Router::myPost('/addproduct', Admin::class, 'addProduct', true, false);
+Router::myPost('/reductproduct', Admin::class, 'updateProduct', true, false);
+Router::myPost('/deleteproduct', Admin::class, 'deleteProduct', true, false);
 Router::getContent();
 ?>

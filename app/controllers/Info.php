@@ -288,5 +288,67 @@ class Info{
         self::sessionDestroy();
         header("Location: /");
     }
+
+    public static function selectActivecategories(){
+        $sqlSelect = "SELECT * FROM `categories` WHERE `featured` = 'Да'";
+        $querySelect = mysqli_query(Connect::connectDB(), $sqlSelect);
+        
+        $count = mysqli_num_rows($querySelect);
+        if($count > 0){
+            while($rows = mysqli_fetch_assoc($querySelect)){
+                $idCategory = $rows["id"];
+                $title = $rows["title"];
+                $description = $rows["description"];
+                ?>
+                <div class="pt-10">
+                    <div>
+                        <p class="text-3xl"><?=$title?></p>
+                    </div>
+                    <div class="pt-6 flex gap-6">
+                    <?      
+                            $sqlSelect2 = "SELECT * FROM `products` WHERE `featured` = 'Да'";
+                            $querySelect2 = mysqli_query(Connect::connectDB(), $sqlSelect2);
+                    
+                            $count = mysqli_num_rows($querySelect2);
+                            if($count > 0){
+                                while($rows = mysqli_fetch_assoc($querySelect2)){
+                                    $id = $rows["id"];
+                                    $title = $rows["title"];
+                                    $author = $rows["author"];
+                                    $categoryProduct = $rows["category_id"];
+                                    $discountprice = $rows["price-discount"];
+                                    $fullprice = $rows["price-full"];
+                                    $description = $rows["description"];
+                                    $date = $rows["date"];
+                                    $pages = $rows["pages-quantity"];
+                                    $img = $rows["img"];
+                                    if($idCategory == $categoryProduct){
+                                        ?>
+                                            <div class="hover:scale-105 rounded-sm transition-all w-[185px]">
+                                                <a href="/book?id=<?echo $id?>"><img class="w-[185px] h-[270px]" src="/png_files/products/<?=$img?>">
+                                                <div class="pt-2">
+                                                    <div class="flex space-x-2 items-center">
+                                                        <p class="text-md text-red-600 line-through mr-1 text-primary"><?=$fullprice?> ₽</p>
+                                                        <p class="text-lg text-green-500 font-sans-bold"><?=$discountprice?> ₽</p>
+                                                    </div>
+                                                    <p class="text-lg font-bold"><?=$title?></p>
+                                                    <p class="text-base"><?=$author?></p>
+                                                </div></a>
+                                                <div class="pt-2 flex items-center space-x-2">
+                                                    <button class="py-1 px-1 bg-none border-2 border-[#747474] hover:bg-gradient-to-r from-[#BC3029] to-[#DE4A0B] hover:border-none transition-all" type="submit">В корзину</button>
+                                                    <button class="text-2xl hover:bg-blue-500" type="submit"><ion-icon name="heart-outline"></ion-icon></button>
+                                                </div>
+                                            </div>
+                                        <?
+                                    }
+                                }
+                            }
+                    ?>
+                    </div>
+                </div>
+                <?
+            }
+        }
+    }
 }
 ?>

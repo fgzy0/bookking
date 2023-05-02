@@ -83,7 +83,17 @@ class Router{
                             $method = $val["method"];
                             $action -> $method($_POST);
                             die();
-                    }
+                        case 'updateProduct':
+                            $action = new $val["class"];
+                            $method = $val["method"];
+                            $action -> $method($_POST);
+                            die();
+                        case 'deleteProduct':
+                            $action = new $val["class"];
+                            $method = $val["method"];
+                            $action -> $method($_POST);
+                            die();
+                        }
                 }else{
                     require_once "views/pages/" . $val["pages"] . '.php';
                 }
